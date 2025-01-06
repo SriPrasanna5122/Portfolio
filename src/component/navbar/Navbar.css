@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box; 
+}
+
+.navbar {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+  height: 70px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.navbar h1 {
+  font-family: "Playfair Display", serif;
+  color: #FFFFFF;
+  font-size: 28px; 
+  font-weight: bold;
+}
+
+.navbar-content {
+  display: flex; 
+  gap: 30px; 
+  align-items: center;
+  flex-wrap: nowrap; 
+}
+
+.navbar-content a {
+  font-family: "Roboto", sans-serif;
+  color: #CCCCCC; 
+  font-size: 18px;
+  text-decoration: none; 
+  transition: color 0.3s ease;
+}
+
+.navbar-content a.active {
+  color: #FFFFFF; 
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none; /* Initially hidden */
+}
+
+@media (max-width: 1024px) {
+  .navbar-content {
+    display: none; /* Hide menu by default */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position the menu */
+    top: 70px; /* Below the navbar */
+    right: 0; /* Align to the right */
+    background-color: #000000; /* Background color */
+    width: 200px; /* Fixed width for the menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for the menu */
+    padding: 10px; /* Padding for better spacing */
+  }
+
+  .navbar-content.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 24px; /* Icon size */
+  }
+}
