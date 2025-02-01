@@ -9,7 +9,7 @@ const Skill = () => {
     { name: 'CSS', icon: <FaCss3Alt />, level: 95 },
     { name: 'JavaScript', icon: <FaJsSquare />, level: 85 },
     { name: 'React', icon: <FaReact />, level: 85 },
-    { name: 'Spring Boot', icon: <SiSpring />, level: 85 },
+    { name: 'Spring Boot', icon: <SiSpringboot />, level: 85 },
     { name: 'Hibernate', icon: <SiHibernate />, level: 85 },
     { name: 'MySQL', icon: <FaDatabase />, level: 80 },
     { name: 'MongoDB', icon: <SiMongodb />, level: 75 },
@@ -18,24 +18,16 @@ const Skill = () => {
     { name: 'Git', icon: <FaGitAlt />, level: 85 },
     { name: 'Bootstrap', icon: <FaBootstrap />, level: 95 },
     { name: 'Docker', icon: <FaDocker />, level: 60 },
-];
-
+  ];
 
   return (
     <div className="skills-section">
       <h2 className="skills-title">Skills</h2>
       <div className="skills-container">
         {skills.map(skill => (
-          <div className="skill-bar" key={skill.name}>
-            <div className="skill-name">
-              {skill.icon} {skill.name}
-            </div>
-            <div className="progress-bar">
-              <div
-                className="progress"
-                style={{ width: `${skill.level}%` }}
-              ></div>
-            </div>
+          <div className="skill-bubble" key={skill.name}>
+            <div className="icon">{skill.icon}</div>
+            <div className="skill-name">{skill.name}</div>
             <div className="skill-percentage">{skill.level}%</div>
           </div>
         ))}
@@ -59,72 +51,62 @@ const Skill = () => {
         .skills-section {
           padding: 50px;
           background-color: var(--background-color);
+          text-align: center;
         }
 
         .skills-title {
           font-size: 36px;
           margin-bottom: 30px;
-          text-align: center;
           color: var(--secondary-color);
         }
 
         .skills-container {
           display: flex;
           flex-wrap: wrap;
-          gap: 30px;
+          gap: 20px;
           justify-content: center;
         }
 
-        .skill-bar {
+        .skill-bubble {
+          width: 120px;
+          height: 120px;
           background: var(--primary-color);
           color: var(--secondary-color);
-          padding: 20px;
-          border-radius: 10px;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          width: 120px;
-          text-align: center;
-          position: relative;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          position: relative;
+          overflow: hidden;
         }
 
-        .skill-bar:hover {
-          transform: scale(1.05);
+        .skill-bubble:hover {
+          transform: scale(1.1);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        .skill-bar:hover .skill-percentage {
-          opacity: 1;
+        .icon {
+          font-size: 36px;
         }
 
         .skill-name {
-          font-size: 18px;
-          margin-bottom: 10px;
-        }
-
-        .skill-name svg {
-          margin-right: 10px;
-        }
-
-        .progress-bar {
-          background-color: #ccc;
-          height: 10px;
-          border-radius: 5px;
-          margin-bottom: 10px;
-        }
-
-        .progress {
-          background-color: #4caf50;
-          height: 100%;
-          border-radius: 5px;
+          font-size: 14px;
+          margin-top: 8px;
         }
 
         .skill-percentage {
           position: absolute;
           bottom: 10px;
-          font-size: 16px;
+          font-size: 14px;
           opacity: 0;
           transition: opacity 0.3s ease;
-          color: var(--secondary-color);
+        }
+
+        .skill-bubble:hover .skill-percentage {
+          opacity: 1;
         }
       `}</style>
     </div>
