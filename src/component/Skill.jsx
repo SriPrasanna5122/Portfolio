@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaJava, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase } from 'react-icons/fa';
+import { FaJava, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase, FaNodeJs, FaGitAlt, FaBootstrap, FaDocker } from "react-icons/fa";
+import { SiSpringboot, SiHibernate, SiMongodb, SiExpress, SiJenkins, SiKubernetes } from "react-icons/si";
 
 const Skill = () => {
   const skills = [
