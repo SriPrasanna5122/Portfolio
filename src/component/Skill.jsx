@@ -3,15 +3,22 @@ import { FaJava, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase } from 'rea
 
 const Skill = () => {
   const skills = [
-    { name: 'Java', icon: <FaJava />, level: 75 },
-    { name: 'HTML', icon: <FaHtml5 />, level: 70 },
-    { name: 'CSS', icon: <FaCss3Alt />, level: 75 },
-    { name: 'JS', icon: <FaJsSquare />, level: 75 },
-    { name: 'MySQL', icon: <FaDatabase />, level: 50 },
-    { name: 'React', icon: <FaReact />, level: 60 },
-    { name: 'Springboot', icon: <FaReact />, level: 50 }, // Example replacement
-    { name: 'Hibernate', icon: <FaDatabase />, level: 50 },
-  ];
+    { name: 'Java', icon: <FaJava />, level: 90 },
+    { name: 'HTML', icon: <FaHtml5 />, level: 98 },
+    { name: 'CSS', icon: <FaCss3Alt />, level: 95 },
+    { name: 'JavaScript', icon: <FaJsSquare />, level: 85 },
+    { name: 'React', icon: <FaReact />, level: 85 },
+    { name: 'Spring Boot', icon: <SiSpring />, level: 85 },
+    { name: 'Hibernate', icon: <SiHibernate />, level: 85 },
+    { name: 'MySQL', icon: <FaDatabase />, level: 80 },
+    { name: 'MongoDB', icon: <SiMongodb />, level: 75 },
+    { name: 'Node.js', icon: <FaNodeJs />, level: 75 },
+    { name: 'Express.js', icon: <SiExpress />, level: 70 },
+    { name: 'Git', icon: <FaGitAlt />, level: 85 },
+    { name: 'Bootstrap', icon: <FaBootstrap />, level: 95 },
+    { name: 'Docker', icon: <FaDocker />, level: 60 },
+];
+
 
   return (
     <div className="skills-section">
