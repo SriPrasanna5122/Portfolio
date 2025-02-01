@@ -58,8 +58,8 @@ const AboutMe = () => {
         }
 
         .profile-img {
-          width: 150px;
-          height: 150px;
+          width: 400px;
+          height: 400px;
           border-radius: 50%;
           margin-bottom: 20px;
           border: 3px solid var(--secondary-color);
